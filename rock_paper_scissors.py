@@ -13,31 +13,30 @@ class RockPaperScissorsGame:
             root,
             text="Choose Rock, Paper, or Scissors",
             font=("Helvetica", 14),
-            name="game_instructions",
-            takefocus=True
+            name="game_instructions"
         )
         self.label_instruction.pack(pady=10)
 
         # Graphics mapping (using Emojis)
         self.graphics = {
             'rock': '✊',
-            'paper': '✋',
-            'scissors': '✌'
+            'rock': 'Rock (✊)',
+            'paper': 'Paper (✋)',
+            'scissors': 'Scissors (✌)'
         }
 
         # Frame for displaying graphical choices
         self.frame_display = tk.Frame(root)
         self.frame_display.pack(pady=10)
 
-        self.lbl_player_graphic = tk.Label(self.frame_display, text="❓", font=("Segoe UI Emoji", 40))
+        self.lbl_player_graphic = tk.Label(self.frame_display, text="Unknown (❓)", font=("Segoe UI Emoji", 40))
         self.lbl_player_graphic.grid(row=0, column=0, padx=20)
         tk.Label(self.frame_display, text="You").grid(row=1, column=0)
 
         self.lbl_vs = tk.Label(self.frame_display, text="VS", font=("Helvetica", 20))
         self.lbl_vs.grid(row=0, column=1, padx=20)
 
-        self.lbl_computer_graphic = tk.Label(self.frame_display, text="❓", font=("Segoe UI Emoji", 40))
-        self.lbl_computer_graphic.grid(row=0, column=2, padx=20)
+        self.lbl_computer_graphic = tk.Label(self.frame_display, text="Unknown (❓)", font=("Segoe UI Emoji", 40))
         tk.Label(self.frame_display, text="Computer").grid(row=1, column=2)
 
         self.frame_buttons = tk.Frame(root)
