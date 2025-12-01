@@ -19,7 +19,7 @@ class RockPaperScissorsGame:
 
         # Graphics mapping (using Emojis)
         self.graphics = {
-            'rock': '✊',
+
             'rock': 'Rock (✊)',
             'paper': 'Paper (✋)',
             'scissors': 'Scissors (✌)'
@@ -37,6 +37,8 @@ class RockPaperScissorsGame:
         self.lbl_vs.grid(row=0, column=1, padx=20)
 
         self.lbl_computer_graphic = tk.Label(self.frame_display, text="Unknown (❓)", font=("Segoe UI Emoji", 40))
+        self.lbl_computer_graphic.grid(row=0, column=2, padx=20)
+        self.lbl_computer_graphic.grid(row=0, column=2, padx=20)
         tk.Label(self.frame_display, text="Computer").grid(row=1, column=2)
 
         self.frame_buttons = tk.Frame(root)
